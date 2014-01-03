@@ -1,0 +1,10 @@
+SOCKET: A socket is one of the two end points of a network connection. It contains the 'IpEndPoint' that it sends messages from (known as the LocalEndPoint in vb.net) and the 'IpEndPoint' it sends messages too (known as the RemoteEndPoint in vb.net); it also has routines and functions for sending and receiving messages as well as for connecting to a RemoteEndPoint or binding to a LocalEndPoint.
+
+IPENDPOINT: This contains essencially two things; an IP Address and a Port Number, it also contains things like whether the port is available or not.
+
+TCPLISTENER: This contains a 'Socket' as well as functions for handeling incomming connection requests.
+Two important and unique functions in 'TcpListener' are '.AcceptSocket' which generates a socket with a different 'LocalEndPoint' but the same 'RemoteEndPoint' and connects the 'Socket' at the 'RemoteEndPoint' to this new one so that the 'TcpListener' is clear for new requests; the other function is '.AcceptClient', this does the same thing as 'AcceptSocket' but it generates a 'TcpClient' object and puts the 'Socket' inside that (the raw socket is much more flexable but if you are just sending it is easier to use a 'TcpClient').
+
+TCPCLIENT: This is an object like a 'TcpListener' except it contains functions for sending messages rather than listening for connection requests. One thing it contains is the 'Stream' object that is used to send and recieve messages.
+
+STREAM: A 'Stream' is just like a tunnel that data is passed through. It's closed in and can be encrypted and allows for quick transfer of data over network or internal memory
