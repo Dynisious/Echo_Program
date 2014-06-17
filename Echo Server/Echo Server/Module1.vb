@@ -10,7 +10,7 @@ Module Module1
             Console.WriteLine("Input Port to listen on")
             Try
                 port = CInt(Console.ReadLine()) 'sets the port number
-                Exit While 'exits the loopS
+                Exit While 'exits the loop
             Catch exp As Exception 'this triggers if the port doesn't work as an integer and clears the console
                 Console.Clear() 'clears the console
             End Try
